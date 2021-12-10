@@ -9,7 +9,7 @@ const forecast=(longitude,latitude,callaback)=> {
         }else if(body.cod!=200){
             callaback("Unable to find location",undefined)
         }else{
-            callaback(undefined,"Today's weather is "+body.weather[0].description+ ". It is currently "+body.main.temp +" degrees out. There is humidity of "+(body.main.humidity)+".")
+            callaback(undefined,"Today's weather is "+body.weather[0].description+ ". It is currently "+body.main.temp +" degrees out. And pressure is "+body.main.pressure+" pascal. There is humidity of "+(body.main.humidity)+" %.")
         }
     })
 }
